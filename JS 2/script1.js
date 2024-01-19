@@ -1,17 +1,21 @@
-let platno = document.getElementById("platno");
-let kontext = platno.getContext("2d");
-let stredKruhuX = 100;
-let stredKruhuY = 100;
-
-platno.addEventListener("mousemove", (event) => {
-     stredKruhuX = event.clientX;
-     stredKruhuY = event.clientY;
+document.addEventListener("DOMContentLoaded", function () {
+    let platno = document.getElementById("platno");
+    let kontext = platno.getContext("2d");
+    let stredKruhuX = 100;
+    let stredKruhuY = 100;
+    platno.onmousemove = function (event) {
+        stredKruhuX = event.clientX;
+        stredKruhuY = event.clientY;
+    };
+    function nakresli() {
+        kontext.clearRect(0, 0, platno.width, platno.height);
+        kontext.fillStyle = "#E63B2E";
+        kontext.beginPath();
+        kontext.arc(stredKruhuX, stredKruhuY, 50, 0, 2 * Math.PI);
+        kontext.fill();
+        kontext.fillStyle = "#084B83";
+        kontext.fillRect(100, 100, 100, 100);
+        requestAnimationFrame(nakresli);
+    }
+    nakresli();
 });
-
-function nakresli() {
-    kontext.clearRect(0, 0, platno.width, platno.height);
-    kontext.beginPath();
-    kontext.arc(stredKruhuX, stredKruhuY, 50, 50); 
-    kontext.fill();
-    kontext.fillRect(50, 50, 100, 100);
-}
