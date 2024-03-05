@@ -1,0 +1,22 @@
+create table zaci(
+ id int primary key auto_increment,
+ jmeno varchar(20),
+ prijmeni varchar(20),
+ trida varchar(3)
+ );
+ 
+ insert into zaci(jmeno, prijmeni, trida) values("Jožin", "Bádl", "1.A");
+ insert into zaci(jmeno, prijmeni, trida) values("Pepa", "Bašta", "1.A");
+ insert into zaci(jmeno, prijmeni, trida) values("Eliška", "Řádná", "1.A");
+  insert into zaci(jmeno, prijmeni, trida) values("František", "Bílý", "1.B");
+ insert into zaci(jmeno, prijmeni, trida) values("Ondřej", "Šíma", "1.B");
+ insert into zaci(jmeno, prijmeni, trida) values("Prokop", "Dveře", "1.B");
+  insert into zaci(jmeno, prijmeni, trida) values("Jan", "Šmýd", "1.C");
+ insert into zaci(jmeno, prijmeni, trida) values("Andrea", "Jasná", "1.C");
+ insert into zaci(jmeno, prijmeni, trida) values("Amélie", "Pokorná", "1.C");
+ 
+
+ select * from(zaci);
+ 
+ select id, jmeno, prijmeni from zaci where trida = "1.A";
+ select jmeno, prijmeni, trida from zaci where id > 6;
