@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrace</title>
+    <link rel="stylesheet" href="styly.css">
+</head>
+<body>
+
+    <form action="data.html" method="post">
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Registrace</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jméno:</td>
+                    <td><input type="text" name="jmeno" required></td>
+                </tr>
+                <tr>
+                    <td>Heslo:</td>
+                    <td><input type="password" name="heslo" required></td>
+                </tr>
+                <tr>
+                    <td>Věk:</td>
+                    <td><input type="number" name="vek"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>Student:</td>
+                    <td><input type="checkbox" name="student"></td>
+                </tr>
+                <tr>
+                    <td>Pohlaví:</td>
+                    <td>
+                        <input type="radio" name="pohlavi" value="muz" required> Muž
+                        <input type="radio" name="pohlavi" value="zena" required> Žena
+                    </td>
+                </tr>
+                <tr>
+                    <td>Vzdělání:</td>
+                    <td>
+                        <select name="vzdelani" required>
+                            <option value="ZS">Základní škola</option>
+                            <option value="SS">Střední škola</option>
+                            <option value="VOS">Vyšší odborná škola</option>
+                            <option value="VŠ">Vysokoškolské</option>
+                            <option value="Mgr">Magisterské</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <input type="submit" value="Zaregistrovat">
+
+    </form>
+
+</body>
+</html>
